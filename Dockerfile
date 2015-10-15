@@ -1,5 +1,5 @@
 # Using a compact OS
-FROM deb:jessie
+FROM debian:jessie
 MAINTAINER	Sandy Chan <sandydy.chan@gmail.com>
 
 RUN apt-get update \
