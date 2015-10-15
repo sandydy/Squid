@@ -1,5 +1,5 @@
 # Using a compact OS
-FROM ubuntu:latest
+FROM deb:jessie
 MAINTAINER	Sandy Chan <sandydy.chan@gmail.com>
 
 RUN apt-get update \
