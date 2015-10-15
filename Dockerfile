@@ -13,4 +13,3 @@ RUN chmod 755 /sbin/entrypoint.sh
 
 EXPOSE 3128/tcp
 ENTRYPOINT ["/sbin/entrypoint.sh"]
-CMD["squid3", "-f /etc/squid3/squid.conf -NYCd 1"]
