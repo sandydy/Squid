@@ -1,6 +1,9 @@
 # Using a compact OS
-FROM sameersbn/squid:latest
+FROM ubuntu:latest
 MAINTAINER	Sandy Chan <sandydy.chan@gmail.com>
+
+RUN apt-get update \
+ && apt-get install -y squid3
 
 COPY ./squid.conf /etc/squid3/squid.conf
 COPY ./entrypoint.sh /sbin/entrypoint.sh
