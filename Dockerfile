@@ -2,6 +2,8 @@
 FROM debian:jessie
 MAINTAINER	Sandy Chan <sandydy.chan@gmail.com>
 
+ENV DEBIAN_FRONTEND noninteractive
+
 RUN apt-get update \
  && apt-get install -y squid3
 
@@ -11,3 +13,4 @@ RUN chmod 755 /sbin/entrypoint.sh
 
 EXPOSE 3128/tcp
 ENTRYPOINT ["/sbin/entrypoint.sh"]
+CMD["squid3", "-f /etc/squid3/squid.conf -NYCd 1"]
